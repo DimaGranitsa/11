@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pogoda.MainPage">
+    
+    <ScrollView BackgroundColor="Blue">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="300"/>
+
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="Blue" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid BackgroundColor="Blue" Grid.Column="0">
+                    <Entry 
+                   Placeholder="введите город" 
+                   Margin="0,15,0,0" 
+                   HeightRequest="60"
+                   x:Name="ELogin"
+                   Text="{Binding UserLogin}"
+                   Visual="Material"/>
+                </Grid>
+                <Grid BackgroundColor="Blue"  Grid.Column="1">
+                    <Button Text="Поиск" FontSize="20" InputTransparent="True" Background="blue" >
+                    </Button>
+                </Grid>
+
+            </Grid>
+            <Grid BackgroundColor="AliceBlue" Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+                <Grid BackgroundColor="Gray" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" BackgroundColor="AliceBlue">
+                        
+                    </Grid>
+                    <Grid Grid.Column="3" BackgroundColor="AliceBlue">
+
+                    </Grid>
+                    <Grid Grid.Column="1" >
+                        <Label Text="+14" TextColor="White" FontSize="60" VerticalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid Grid.Column="2" >
+                        <Image Grid.Column="2"   Source="san.jpg" ></Image> 
+
+                    </Grid>
+                </Grid>
+                <Grid BackgroundColor="Gray" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                        
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" >
+                        <Label Text="Ясно" TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1" >
+                        <Label Text="Ощущается как:+ 9" TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </Grid>
+                <Grid BackgroundColor="Gray" Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="220"/>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" BackgroundColor="White" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="45" />
+                            <RowDefinition Height="45" />
+                            <RowDefinition Height="45" />
+
+                        </Grid.RowDefinitions>
+                        <Grid Margin="5" Grid.Row="0" BackgroundColor="red" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="48" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Margin="5" Grid.Column="0" BackgroundColor="Gray" >
+                                    
+                                </Grid>
+                                <Grid Margin="5" Grid.Column="1" BackgroundColor="Gray" >
+                               <Label Text="4м/с" TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                            </Grid>
+                            <Grid Margin="5" Grid.Column="2" BackgroundColor="Gray" >
+                                    <Label Text="ЮЗ" TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                        </Grid>
+                        </Grid>
+                        <Grid Margin="5" Grid.Row="1" BackgroundColor="red" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="48" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Margin="5" Grid.Column="0" BackgroundColor="Gray" >
+
+                                </Grid>
+                                <Grid Margin="5" Grid.Column="1" BackgroundColor="Gray" >
+                                    <Label Text="764 мм рт" TextColor="White" FontSize="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                </Grid>
+                                <Grid Margin="5" Grid.Column="2" BackgroundColor="Gray" >
+                                    <Label Text="СТ" TextColor="White" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Margin="5" Grid.Row="2" BackgroundColor="red" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="48" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Margin="5" Grid.Column="0" BackgroundColor="Gray" >
+
+                                </Grid>
+                                <Grid Margin="5" Grid.Column="1" BackgroundColor="Gray" >
+                                    <Label Text="28%" TextColor="White" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+
+                                </Grid>
+                                
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1" BackgroundColor="White" >
+                        <ScrollView>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Сейчас" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                            </Grid>
+                                <Grid Grid.Row="1" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="2" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="3" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="4" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="5" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="6" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="7" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="8" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="9" BackgroundColor="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="64" />
+                                        <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="64"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Margin="5" Grid.Column="0" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="12:00" FontSize="15" TextColor="White"/>
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="1" BackgroundColor="Red">
+
+                                    </Grid>
+                                    <Grid Margin="5" Grid.Column="2" BackgroundColor="Red">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="+ 15" FontSize="20" TextColor="White"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </ScrollView>
+                    </Grid>
+                </Grid>
+
+            </Grid>
+               
+               
+         
+            
+
+        </Grid>
+    </ScrollView>
+    
+
+</ContentPage>
